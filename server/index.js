@@ -11,17 +11,30 @@ app.use(express.static(`${__dirname}/../public`));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const apiProxy = createProxyMiddleware(
+// const announcementsProxy = createProxyMiddleware(
+//   {
+//     target: 'http://localhost:4200',
+//     changeOrigin: true,
+//   },
+// );
+
+const reviewsProxy = createProxyMiddleware(
   {
     target: 'http://localhost:4200',
     changeOrigin: true,
   },
 );
 
-// proxy to reviews server
+// // proxy to announcements service
+// app.use(
+//   'randomGame',
+//   announcementsProxy,
+// );
+
+proxy to reviews service
 app.use(
   '/api/reviews/:id',
-  apiProxy,
+  reviewsProxy,
 );
 
 module.exports = app;
