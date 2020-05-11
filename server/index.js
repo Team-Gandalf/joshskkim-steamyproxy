@@ -7,7 +7,7 @@ const app = express();
 app.use(express.static(path.join(__dirname, '../public')));
 
 // render html that houses react
-app.get('/games/:id', function(req, res) {
+app.get('/games/:id', (req, res) => {
   const react = path.join(__dirname, '../public/index.html');
   res.sendFile(react);
 });
@@ -18,7 +18,7 @@ app.use(
   proxy({
     target: 'http://localhost:4200',
     changeOrigin: true,
-  })
+  }),
 );
 
 module.exports = app;
