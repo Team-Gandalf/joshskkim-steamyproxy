@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Team-Gandalf/reviews-proxy/issues"
   },
-  "homepage": "https://github.com/Team-Gandalf/reviews-proxy#readme"
+  "homepage": "https://github.com/Team-Gandalf/reviews-proxy#readme",
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
 }
