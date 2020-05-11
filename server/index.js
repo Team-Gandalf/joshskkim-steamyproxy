@@ -31,7 +31,7 @@ const reviewsProxy = createProxyMiddleware(
 //   announcementsProxy,
 // );
 
-proxy to reviews service
+// proxy to reviews service
 app.use(
   '/api/reviews/:id',
   reviewsProxy,
