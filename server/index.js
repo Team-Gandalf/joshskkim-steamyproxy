@@ -42,7 +42,8 @@ app.use(
 // proxy to siderbar service
 app.use(
   '/mainBody',
-  sidebarProxy);
+  sidebarProxy,
+);
 
 // proxy to announcements service for random game
 app.use(
