@@ -9,15 +9,15 @@ app.use(express.static(`${__dirname}/../public`));
 
 const mediaProxy = createProxyMiddleware(
   {
-    target: 'http://3.23.132.230:8000/',
+    target: 'http://3.23.132.230:8000',
     changeOrigin: true,
   },
 );
 
-// const sidebarProxy = createProxyMiddleware({
-//   target: 'http://localhost:1991/',
-//   changeOrigin: true,
-// });
+const sidebarProxy = createProxyMiddleware({
+  target: 'http://52.14.114.30:1991',
+  changeOrigin: true,
+});
 
 const announcementsProxy = createProxyMiddleware(
   {
@@ -39,10 +39,10 @@ app.use(
   mediaProxy,
 );
 
-// // proxy to siderbar service
-// app.use(
-//   '/mainBody',
-//   sidebarProxy);
+// proxy to siderbar service
+app.use(
+  '/mainBody',
+  sidebarProxy);
 
 // proxy to announcements service for random game
 app.use(
