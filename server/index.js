@@ -15,7 +15,7 @@ const mediaProxy = createProxyMiddleware(
 );
 
 const sidebarProxy = createProxyMiddleware({
-  target: 'http://52.14.114.30:1991',
+  target: 'http://52.14.114.30:1992',
   changeOrigin: true,
 });
 
