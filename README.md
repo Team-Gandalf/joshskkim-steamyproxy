@@ -1,6 +1,18 @@
-# reviews-proxy
+# Steamy
 
-Proxy for Reviews component of Steamy
+Proxy for the 4 microservices linked to Steamy.
+
+### Media
+* Media module displaying relevant images and videos for each game
+
+### Announcements
+* Interactable modules with news regarding the game or from the developers
+
+### Sidebar and Related Body
+* All information regarding the game, as well as related games you may enjoy
+
+### Reviews
+* User interactable reviews component from gamers that played the product themselves.
 
 ## Getting started
 
